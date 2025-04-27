@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jaksh_Jain</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="portfolio.css" />
+
+    <link rel="preload" href="portfolio.css" as="style" />
+    <style>
+      p span {
+        color: #e6b450;
+        font-weight: bold;
+      }
+      .hero h1 span {
+        background: rgb(255, 255, 255);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+      }
+
+      .spline-embed {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        overflow: hidden;
+      }
+
+      .spline-embed iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+        display: block;
+      }
+      .project-link {
+        margin: 0 20px 20px 20px;
+        display: block;
+      }
+
+      .about-image img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .spline-embed {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+      .spline-embed iframe {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+      }
+
+      .mobile-bg {
+        display: none;
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -2;
+      }
+
+      @media (max-width: 768px) {
+        .about-image img {
+          width: 100%;
+          height: auto;
+        }
+        iframe {
+          display: none;
+        }
+        .mobile-bg {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="spline-embed">
+      <iframe
+        src="https://my.spline.design/100followers-zoXC7C05evBZRiMiCczMWO3e/"
+        id="spline-frame"
+        loading="lazy"
+        style="pointer-events: none"
+      ></iframe>
+      <img
+        src="your-static-background.jpg"
+        class="mobile-bg"
+        alt="Background"
+      />
+    </div>
+
+    <header>
+      <div class="container">
+        <nav>
+          <div class="logo">Jaksh Jain</div>
+          <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#journey">Journey</a>
+            <a href="#projects">Projects</a>
+            <a href="../Jaksh Resume.pdf" download>Resume</a>
+            <a href="#contact">Contact</a>
+          </div>
+          <button class="theme-toggle">
+            <i class="fas fa-sun"></i>
+          </button>
+          <button class="mobile-menu-toggle">
+            <i class="fas fa-bars"></i>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="container">
+        <h1>
+          <span>Hello<br />I'm Jaksh Jain<br />Develop / Design</span>
+        </h1>
+        <p>
+          <span
+            >I build exceptional digital experiences that perform as good as
+            they look.</span
+          >
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="#contact" class="btn btn-primary">Contact Me</a>
+        </div>
+        <div class="skills-scroll-container">
+          <div class="skills-scroll">
+            <div class="skill-item-scroll">
+              <i class="fab fa-html5"></i>
+              <span>HTML</span>
+            </div>
+            <div class="skill-item-scroll">
+              <i class="fab fa-css3-alt"></i>
+              <span>CSS</span>
+            </div>
+            <div class="skill-item-scroll">
+              <i class="fab fa-js"></i>
+              <span>JavaScript</span>
+            </div>
+            <div class="skill-item-scroll">
+              <i class="fab fa-python"></i>
+              <span>Python</span>
+            </div>
+            <div class="skill-item-scroll">
+              <i class="fas fa-code"></i>
+              <span>C</span>
+            </div>
+            <div class="skill-item-scroll">
+              <i class="fas fa-code"></i>
+              <span>C++</span>
+            </div>
+            <div class="skill-item-scroll">
+              <i class="fab fa-git-alt"></i>
+              <span>Git</span>
+            </div>
+            <div class="skill-item-scroll">
+              <i class="fab fa-github"></i>
+              <span>GitHub</span>
+            </div>
+            <!-- Clone for seamless scrolling -->
+            <div class="skills-clone">
+              <div class="skill-item-scroll">
+                <i class="fab fa-html5"></i>
+                <span>HTML</span>
+              </div>
+              <div class="skill-item-scroll">
+                <i class="fab fa-css3-alt"></i>
+                <span>CSS</span>
+              </div>
+              <div class="skill-item-scroll">
+                <i class="fab fa-js"></i>
+                <span>JavaScript</span>
+              </div>
+              <div class="skill-item-scroll">
+                <i class="fab fa-python"></i>
+                <span>Python</span>
+              </div>
+              <div class="skill-item-scroll">
+                <i class="fas fa-code"></i>
+                <span>C</span>
+              </div>
+              <div class="skill-item-scroll">
+                <i class="fas fa-code"></i>
+                <span>C++</span>
+              </div>
+              <div class="skill-item-scroll">
+                <i class="fab fa-git-alt"></i>
+                <span>Git</span>
+              </div>
+              <div class="skill-item-scroll">
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="about-container">
+          <div class="about-image">
+            <img
+              src="../images/Jaksh1-removebg-preview.png"
+              height="250px"
+              weight="250px"
+              alt="Jaksh Jain"
+            />
+          </div>
+          <div class="about-content">
+            <h2>About me</h2>
+            <p>
+              Hi, I am Jaksh Jain. I completed my schooling in 2024 at Guru
+              Shree Shanti Vijay Jain Vidyalaya and am currently pursuing my
+              college education at SRM Institute of Science and Technology. I
+              love writing poetry and listening to old classical Indian music.I
+              believe that too many perspectives can divide people.While
+              differing viewpoints can sometimes create division, I find value
+              to integrating in exploring diverse perspectives. My approach
+              involves synthesizing these ideas into a cohesive framework that
+              integrates both personal insights and professional expertise.
+            </p>
+            <div class="status">
+              <div class="status-dot"></div>
+              <div class="status-text">Available for freelance work</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Journey Section -->
+    <section class="journey" id="journey">
+      <div class="container">
+        <div class="section-header">
+          <h2>Journey</h2>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <h3 class="timeline-title">Higher Secondary</h3>
+            <div class="timeline-subtitle">
+              Guru Shree Shanti Vijay Jain Vidyalaya
+            </div>
+            <div class="timeline-content">
+              <p>Completed my higher secondary education.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <h3 class="timeline-title">College SRMIST</h3>
+            <div class="timeline-subtitle">B-Tech(2024-28)</div>
+            <div class="timeline-content">
+              <p>
+                Started my college journey at SRM Institute of Science and
+                Technology.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <h3 class="timeline-title">Cloned Airbnb</h3>
+            <div class="timeline-subtitle">HTML, CSS, and JavaScript</div>
+            <div class="timeline-content">
+              <p>
+                Recreated the Airbnb landing page to practice frontend skills
+                and responsiveness.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <h3 class="timeline-title">Cloned Tidal</h3>
+            <div class="timeline-subtitle">HTML, CSS, and JavaScript</div>
+            <div class="timeline-content">
+              <p>
+                Developed a streaming service interface to enhance layout
+                structuring and media integration.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <h3 class="timeline-title">Hackathon at IISc Bangalore</h3>
+            <div class="timeline-subtitle">Achieved 4th Place</div>
+            <div class="timeline-content">
+              <p>
+                Collaborated in a competitive environment to build a functional
+                prototype under time constraints.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <h3 class="timeline-title">Certified in Python</h3>
+            <div class="timeline-subtitle">Udemy Platform</div>
+            <div class="timeline-content">
+              <p>
+                Gained strong foundational and advanced skills in Python
+                programming.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <h3 class="timeline-title">MedBot</h3>
+            <div class="timeline-subtitle">
+              HTML, CSS, JavaScript, and Python
+            </div>
+            <div class="timeline-content">
+              <p>
+                Built a chatbot-based health assistant capable of providing
+                health guidance.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <h3 class="timeline-title">Web Projects</h3>
+            <div class="timeline-subtitle">Portfolio Website</div>
+            <div class="timeline-content">
+              <p>
+                HTML, CSS, and JavaScript - A personal website showcasing
+                skills, projects, and contact details.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+      <div class="container">
+        <div class="section-header">
+          <h2>Certifications & Projects</h2>
+        </div>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-image">
+              <img src="../images/airbnb.png" alt="Project" />
+            </div>
+            <h3 class="project-title">Airbnb Clone</h3>
+            <div class="project-tags">
+              <span class="project-tag">HTML</span>
+              <span class="project-tag">CSS</span>
+              <span class="project-tag">JavaScript</span>
+            </div>
+            <div class="project-description">
+              <p>
+                Imagine this: You've just discovered the magic of HTML and CSS,
+                and you're feeling like a web wizard. "Airbnb? Pfft, I can clone
+                that in a weekend!"
+              </p>
+            </div>
+            <a
+              href="https://github.com/Jaksh-jain/Clone-Airbnb"
+              class="project-link"
+              target="_blank"
+              >Source Code</a
+            >
+          </div>
+          <div class="project-card">
+            <div class="project-image">
+              <img src="../images/tidal.png" alt="Project" />
+            </div>
+            <h3 class="project-title">Tidal Clone</h3>
+            <div class="project-tags">
+              <span class="project-tag">HTML</span>
+              <span class="project-tag">CSS</span>
+              <span class="project-tag">JavaScript</span>
+            </div>
+            <div class="project-description">
+              <p>
+                "Clone-TidalLogin" is a testament to the fact that less is
+                sometimes... just less. It's a minimalist masterpiece that
+                strips away all the unnecessary frills of a modern login page,
+                leaving behind only the bare essentials.
+              </p>
+            </div>
+            <a
+              href="https://github.com/Jaksh-jain/Clone-TidalLogin"
+              class="project-link"
+              targert="_blank"
+              >Source Code</a
+            >
+          </div>
+          <div class="project-card">
+            <div class="project-image">
+              <img src="../images/french pbl.png" alt="Project" />
+            </div>
+            <h3 class="project-title">French Assignment</h3>
+            <div class="project-tags">
+              <span class="project-tag">HTML</span>
+              <span class="project-tag">CSS</span>
+              <span class="project-tag">JavaScript</span>
+            </div>
+            <div class="project-description">
+              <p>
+                French Region And Regional Culture" website is a masterclass in
+                simplicity. It's a digital ode to the PowerPoint presentation,
+                stripped down to its bare essentials.Insider alert: "Made 2
+                hours before presentation!"😂.
+              </p>
+            </div>
+            <a
+              href="https://github.com/Jaksh-jain/french-pbl"
+              class="project-link"
+              target="_blank"
+              >Source Code</a
+            >
+          </div>
+          <div class="project-card">
+            <div class="project-image">
+              <img src="../images/Fasion.png" alt="Project" />
+            </div>
+            <h3 class="project-title">Fasion</h3>
+            <div class="project-tags">
+              <span class="project-tag">HTML</span>
+              <span class="project-tag">CSS</span>
+              <span class="project-tag">JavaScript</span>
+            </div>
+            <div class="project-description">
+              <p>
+                You've been tasked with creating a cutting-edge fashion
+                e-commerce site. You're thinking sleek minimalism,
+                high-resolution imagery, and a user-friendly interface. Instead,
+                what you get is this.
+              </p>
+            </div>
+            <a
+              href="https://github.com/Jaksh-jain/Fasion"
+              class="project-link"
+              target="_blank"
+              >Source Code</a
+            >
+          </div>
+          <div class="project-card">
+            <div class="project-image">
+              <img src="../images/MedBot.png" alt="Project" />
+            </div>
+            <h3 class="project-title">MedBot</h3>
+            <div class="project-tags">
+              <span class="project-tag">HTML</span>
+              <span class="project-tag">CSS</span>
+              <span class="project-tag">JavaScript</span>
+            </div>
+            <div class="project-description">
+              <p>
+                Capstone Project: MedBot is a chatbot-based health assistant
+                that provides health guidance and information. It uses natural
+                language processing to understand user queries and provide
+                relevant solutions. It was developed by me and Arijit Das as
+                part of our capstone project.
+              </p>
+            </div>
+            <a
+              href="https://github.com/arijitdas123student/medical-chatbot-capstone"
+              class="project-link"
+              target="_blank"
+              >Source Code</a
+            >
+          </div>
+          <div class="project-card">
+            <div class="project-image">
+              <img src="../images/Portfolio.png" alt="Project" />
+            </div>
+            <h3 class="project-title">Portfolio-Website</h3>
+            <div class="project-tags">
+              <span class="project-tag">HTML</span>
+              <span class="project-tag">CSS</span>
+              <span class="project-tag">JavaScript</span>
+            </div>
+            <div class="project-description">
+              <p>
+                Been working for a while on this portfolio website. It's a
+                personal website showcasing my skills, projects, and contact
+                details. It's a simple yet elegant design that reflects my
+                personality and work ethic.
+              </p>
+            </div>
+            <a
+              href="https://github.com/Jaksh-jain/Jaksh_Jain"
+              class="project-link"
+              target="_blank"
+              >Source Code</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills">
+      <div class="container">
+        <div class="section-header">
+          <h2>Skills</h2>
+        </div>
+        <div class="skills-container">
+          <div class="skill-category">
+            <div class="skill-header">Frontend Development</div>
+            <div class="skill-content">
+              <div class="skill-item">
+                <div class="skill-name">HTML</div>
+                <div class="skill-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-name">CSS</div>
+                <div class="skill-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-name">JavaScript</div>
+                <div class="skill-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="skill-category">
+            <div class="skill-header languages">Languages</div>
+            <div class="skill-content">
+              <div class="skill-item">
+                <div class="skill-name">Python</div>
+                <div class="skill-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-name">C</div>
+                <div class="skill-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-name">C++</div>
+                <div class="skill-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="skill-category">
+            <div class="skill-header design">Design</div>
+            <div class="skill-content">
+              <div class="skill-item">
+                <div class="skill-name">Figma</div>
+                <div class="skill-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-header">
+          <h2>Get In Touch</h2>
+        </div>
+        <p style="text-align: center; margin-bottom: 40px">
+          Have a project in mind or want to discuss an opportunity? Let's talk!
+        </p>
+        <div class="contact-container">
+          <div class="contact-info">
+            <h3>Contact Information</h3>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-text">
+                <p>Email</p>
+                <a href="mailto:jakshjain18@gmail.com">jakshjain18@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <div class="contact-text">
+                <p>Phone</p>
+                <a href="tel:+919884484100">+919884484100</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-text">
+                <p>Location</p>
+                <span>Chennai, Tamil Nadu, India</span>
+              </div>
+            </div>
+            <div class="find-me">
+              <h4>Find me on</h4>
+              <div class="social-icons">
+                <a
+                  href="https://github.com/Jaksh-jain"
+                  class="social-icon"
+                  target="_blank"
+                >
+                  <i class="fab fa-github"></i>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/jaksh-jain-87079431a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                  class="social-icon"
+                  target="_blank"
+                >
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a
+                  href="https://www.instagram.com/_jaksh_jain?igsh=Y24waXh1NWc1cmI2"
+                  class="social-icon"
+                  target="_blank"
+                >
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a
+                  href="https://x.com/_Jaksh_Jain?t=tDw5SJFWfsAmqjrwZ1Cyvg&s=09"
+                  class="social-icon"
+                  target="_blank"
+                >
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form">
+            <h3>Send Me a Message</h3>
+            <form action="#" method="post">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Your Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    class="form-control"
+                    placeholder="Jaksh J Jain"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="email">Your Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    class="form-control"
+                    placeholder="jakshjain18@gmail.com"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input
+                  type="text"
+                  id="subject"
+                  class="form-control"
+                  placeholder="Project Inquiry"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  class="form-control"
+                  placeholder="Tell me about your project..."
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn-submit">
+                <i class="fas fa-paper-plane"></i> Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-container">
+          <div class="footer-logo">Jaksh Jain</div>
+          <div class="footer-tagline">
+            Building exceptional digital experiences that make people's lives
+            better.
+          </div>
+          <div class="footer-social">
+            <a href="https://github.com/Jaksh-jain" target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/jaksh-jain-87079431a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              target="_blank"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a
+              href="https://x.com/_Jaksh_Jain?t=tDw5SJFWfsAmqjrwZ1Cyvg&s=09"
+              target="_blank"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <!-- <a href="#" target="_blank"><i class="fab fa-figma"></i></a> -->
+            <a
+              href="https://www.instagram.com/_jaksh_jain?igsh=Y24waXh1NWc1cmI2"
+              target="_blank"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+          <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+          </div>
+          <div class="footer-copyright">
+            © 2025 Jaksh Jain. All rights reserved. Made with
+            <span class="heart">❤</span> in India
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="portfolio.js"></script>
+  </body>
+</html>
