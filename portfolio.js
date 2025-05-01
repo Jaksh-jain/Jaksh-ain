@@ -44,16 +44,72 @@ if (contactForm) {
   });
 }
 
-// Spline lazy fade-in
-window.addEventListener("load", () => {
-  const iframe = document.getElementById("spline-frame");
-  if (iframe) iframe.style.opacity = "1";
-});
-
 // Mobile Menu Toggle
 const mobileToggle = document.querySelector(".mobile-menu-toggle");
 const navLinks = document.querySelector(".nav-links");
 
 mobileToggle.addEventListener("click", () => {
   navLinks.classList.toggle("active");
+});
+
+function NewEventCaller(cb) {
+  this.observer = new MutationObserver(this.handleMutations.bind(this));
+  this.observeConfig = {
+    childList: true, // Observes changes to the children of a node.
+    subtree: true, // Observes changes in all descendants of a node.
+    attributes: true, // Observes changes to attributes.
+    characterData: true, // Observes changes to character data of a node.
+  };
+  this.bind();
+}
+
+NewEventCaller.prototype.bind = function () {
+  // Use MutationObserver instead of Mutation Events
+  this.observer.observe(document, this.observeConfig); // Start observing the document
+};
+
+NewEventCaller.prototype.handleMutations = function (mutationsList) {
+  // Process each mutation record
+  for (const mutation of mutationsList) {
+    if (mutation.type === "childList") {
+      // Check for added nodes
+      if (mutation.addedNodes.length > 0) {
+        this.isCalled = true;
+        // console.log('A child node has been added.');
+      }
+      // Check for removed nodes
+      if (mutation.removedNodes.length > 0) {
+        this.isCalled = true;
+        // console.log('A child node has been removed.');
+      }
+    } else if (
+      mutation.type === "attributes" ||
+      mutation.type === "characterData"
+    ) {
+      this.isCalled = true;
+      // console.log('An attribute or characterData has been modified');
+    }
+  }
+};
+
+NewEventCaller.prototype.unbind = function () {
+  // Disconnect the MutationObserver
+  this.observer.disconnect();
+};
+
+function CustomEventHandler(e) {
+  this.event = e;
+  this.contextmenuEvent = this.createEvent(this.event.type);
+}
+
+// Improved Spline iframe fade-in after internal load
+window.addEventListener("DOMContentLoaded", () => {
+  const iframe = document.getElementById("spline-frame");
+  if (iframe) {
+    iframe.addEventListener("load", () => {
+      setTimeout(() => {
+        iframe.style.opacity = "1";
+      }, 300); // Optional delay for smoother experience
+    });
+  }
 });
