@@ -108,7 +108,7 @@ window.addEventListener("DOMContentLoaded", () => {
   if (iframe) {
     iframe.addEventListener("load", () => {
       setTimeout(() => {
-        iframe.style.opacity = "1";
+        iframe.style.opacity = "0.5";
       }, 300); // Optional delay for smoother experience
     });
   }
@@ -139,3 +139,45 @@ timelineDots.forEach((dot, i) => {
   observer.observe(dot);
   dot.style.transitionDelay = `${i * 150}ms`;
 });
+
+// Typing Animation for Hero Section
+const typingText = ["Developer", "Designer", "Creator"];
+let i = 0,
+  j = 0,
+  current = "",
+  isDeleting = false;
+function typeEffect() {
+  const speed = isDeleting ? 100 : 200;
+  current = typingText[i].substring(0, j);
+  document.getElementById("typing-text").textContent = current;
+  if (!isDeleting && j < typingText[i].length) {
+    j++;
+  } else if (isDeleting && j > 0) {
+    j--;
+  } else {
+    isDeleting = !isDeleting;
+    if (!isDeleting) i = (i + 1) % typingText.length;
+  }
+  setTimeout(typeEffect, speed);
+}
+document.addEventListener("DOMContentLoaded", typeEffect);
+
+// Toast Notification on Form Submit
+const contactForm2 = document.querySelector(".contact-form form");
+if (contactForm2) {
+  contactForm2.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const toast = document.createElement("div");
+    toast.textContent = "Message sent successfully!";
+    toast.style.cssText = `
+      position: fixed; bottom: 30px; right: 30px;
+      background: #2a9df4; color: white;
+      padding: 15px 20px; border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      z-index: 9999;
+    `;
+    document.body.appendChild(toast);
+    setTimeout(() => toast.remove(), 3000);
+    this.reset();
+  });
+}
