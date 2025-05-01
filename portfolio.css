@@ -839,3 +839,73 @@ footer {
     z-index: 100;
   }
 }
+
+/* Glowing effect for Journey timeline */
+.timeline-dot {
+  background-color: #999;
+  box-shadow: 0 0 0px rgba(0, 255, 255, 0);
+  transition: box-shadow 0.4s ease, background-color 0.4s;
+}
+
+.timeline-dot.active {
+  background-color: #00ffff;
+  box-shadow: 0 0 15px #00ffff, 0 0 30px #00ffff;
+  animation: glow 1.5s infinite ease-in-out;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px #00ffff;
+  }
+  50% {
+    box-shadow: 0 0 20px #00ffff;
+  }
+  100% {
+    box-shadow: 0 0 5px #00ffff;
+  }
+}
+
+/* Glowing neon buttons */
+.btn-primary:hover {
+  box-shadow: 0 0 10px var(--light-blue), 0 0 20px var(--light-blue);
+  background-color: var(--light-blue);
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Lightning bolt zap effect on Journey line */
+.journey-zap {
+  position: absolute;
+  top: 0;
+  left: 18px;
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    #00ffff 10%,
+    transparent 20%,
+    #00ffff 30%,
+    transparent 40%,
+    #00ffff 50%,
+    transparent 60%,
+    #00ffff 70%,
+    transparent 80%,
+    #00ffff 90%,
+    transparent 100%
+  );
+  opacity: 0.2;
+  animation: flickerZap 2s linear infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes flickerZap {
+  0%,
+  100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
