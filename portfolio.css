@@ -909,3 +909,112 @@ footer {
     opacity: 0.5;
   }
 }
+
+/* Typing Text Style */
+#typing-text {
+  color: var(--accent-color);
+  font-weight: bold;
+  font-size: 2rem;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+/* Particle Background */
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -3;
+  top: 0;
+  left: 0;
+}
+
+/* Project Image Hover Scale */
+.project-image img {
+  transition: transform 0.3s ease;
+}
+.project-image:hover img {
+  transform: scale(1.05);
+}
+
+/* Neon Glow on Project Card */
+.project-card:hover {
+  box-shadow: 0 0 10px #2a9df4, 0 0 30px #2a9df4;
+}
+
+/* Glowing Submit Button */
+.btn-submit:hover {
+  box-shadow: 0 0 15px var(--light-blue), 0 0 30px var(--light-blue);
+}
+
+/* 🌟 GLASSMORPHISM CARD STYLE */
+.project-card,
+.contact-info,
+.contact-form {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* 🌈 SOFT GLOW FOR BUTTONS */
+.btn,
+.btn-submit {
+  transition: all 0.3s ease-in-out;
+}
+.btn:hover,
+.btn-submit:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+
+/* ✨ FLOATING IMAGE ANIMATION */
+.project-image img {
+  animation: float 6s ease-in-out infinite;
+}
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* 🌌 GRADIENT OVERLAY FOR BACKGROUND */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(42, 157, 244, 0.2),
+    rgba(230, 180, 80, 0.2)
+  );
+  z-index: -4;
+}
+
+/* 🎯 PILL NAV LINKS (CENTERED) */
+.nav-pill {
+  display: flex;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 50px;
+  padding: 10px 30px;
+  gap: 20px;
+  backdrop-filter: blur(12px);
+}
+.nav-pill a {
+  padding: 8px 16px;
+  border-radius: 25px;
+  transition: background 0.3s;
+}
+.nav-pill a:hover {
+  background-color: var(--light-blue);
+  color: white;
+}
