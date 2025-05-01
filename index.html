@@ -4,6 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jaksh_Jain</title>
+    <meta
+      name="description"
+      content="Jaksh Jain's Portfolio - Developer, Designer, Creator."
+    />
+    <meta property="og:title" content="Jaksh Jain Portfolio" />
+    <meta
+      property="og:description"
+      content="Building exceptional digital experiences."
+    />
+    <meta property="og:image" content="images/Portfolio.png" />
+    <meta property="og:type" content="website" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -101,7 +113,7 @@
       <div class="container">
         <nav>
           <div class="logo">Jaksh Jain</div>
-          <div class="nav-links">
+          <div class="nav-pill nav-links">
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#journey">Journey</a>
@@ -123,7 +135,9 @@
     <section id="home" class="hero" data-aos="fade-up">
       <div class="container">
         <h1>
-          <span>Hello<br />I'm Jaksh Jain<br />Develop / Design</span>
+          <span
+            >Hello<br />I'm Jaksh Jain<br /><span id="typing-text"></span
+          ></span>
         </h1>
         <p>
           <span
@@ -215,7 +229,7 @@
         <div class="about-container">
           <div class="about-image" data-aos="fade-left">
             <img
-              src="../images/Jaksh1-removebg-preview.png"
+              src="images/Jaksh1-removebg-preview.png"
               height="250px"
               weight="250px"
               alt="Jaksh Jain"
@@ -348,12 +362,12 @@
     <section id="projects" class="projects" data-aos="fade-up">
       <div class="container">
         <div class="section-header">
-          <h2>Certifications & Projects</h2>
+          <h2>Projects</h2>
         </div>
         <div class="projects-grid">
           <div class="project-card" data-aos="zoom-in-up">
             <div class="project-image">
-              <img src="../images/airbnb.png" alt="Project" />
+              <img src="images/airbnb.png" alt="Project" />
             </div>
             <h3 class="project-title">Airbnb Clone</h3>
             <div class="project-tags">
@@ -377,7 +391,7 @@
           </div>
           <div class="project-card" data-aos="zoom-in-up">
             <div class="project-image">
-              <img src="../images/tidal.png" alt="Project" />
+              <img src="images/tidal.png" alt="Project" />
             </div>
             <h3 class="project-title">Tidal Clone</h3>
             <div class="project-tags">
@@ -402,7 +416,7 @@
           </div>
           <div class="project-card" data-aos="zoom-in-up">
             <div class="project-image">
-              <img src="../images/french pbl.png" alt="Project" />
+              <img src="images/french pbl.png" alt="Project" />
             </div>
             <h3 class="project-title">French Assignment</h3>
             <div class="project-tags">
@@ -427,7 +441,7 @@
           </div>
           <div class="project-card" data-aos="zoom-in-up">
             <div class="project-image">
-              <img src="../images/Fasion.png" alt="Project" />
+              <img src="images/Fasion.png" alt="Project" />
             </div>
             <h3 class="project-title">Fasion</h3>
             <div class="project-tags">
@@ -452,7 +466,7 @@
           </div>
           <div class="project-card" data-aos="zoom-in-up">
             <div class="project-image">
-              <img src="../images/MedBot.png" alt="Project" />
+              <img src="images/MedBot.png" alt="Project" />
             </div>
             <h3 class="project-title">MedBot</h3>
             <div class="project-tags">
@@ -478,7 +492,7 @@
           </div>
           <div class="project-card" data-aos="zoom-in-up">
             <div class="project-image">
-              <img src="../images/Portfolio.png" alt="Project" />
+              <img src="images/Portfolio.png" alt="Project" />
             </div>
             <h3 class="project-title">Portfolio-Website</h3>
             <div class="project-tags">
@@ -664,26 +678,27 @@
           </div>
           <div class="contact-form">
             <h3>Send Me a Message</h3>
-            <form action="#" method="post">
+            <!-- ✅ START OF UPDATED CONTACT FORM INTEGRATION -->
+            <form action="https://formspree.io/f/mnqewzge" method="POST">
               <div class="form-row">
                 <div class="form-group">
                   <label for="name">Your Name</label>
                   <input
                     type="text"
-                    id="name"
+                    name="name"
+                    required
                     class="form-control"
                     placeholder="Jaksh J Jain"
-                    required
                   />
                 </div>
                 <div class="form-group">
                   <label for="email">Your Email</label>
                   <input
                     type="email"
-                    id="email"
+                    name="email"
+                    required
                     class="form-control"
                     placeholder="jakshjain18@gmail.com"
-                    required
                   />
                 </div>
               </div>
@@ -691,25 +706,26 @@
                 <label for="subject">Subject</label>
                 <input
                   type="text"
-                  id="subject"
+                  name="subject"
+                  required
                   class="form-control"
                   placeholder="Project Inquiry"
-                  required
                 />
               </div>
               <div class="form-group">
                 <label for="message">Message</label>
                 <textarea
-                  id="message"
+                  name="message"
+                  required
                   class="form-control"
                   placeholder="Tell me about your project..."
-                  required
                 ></textarea>
               </div>
               <button type="submit" class="btn-submit">
                 <i class="fas fa-paper-plane"></i> Send Message
               </button>
             </form>
+            <!-- ✅ END OF UPDATED CONTACT FORM INTEGRATION -->
           </div>
         </div>
       </div>
@@ -768,5 +784,8 @@
         offset: 100,
       });
     </script>
+
+    <div id="particles-js"></div>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   </body>
 </html>
