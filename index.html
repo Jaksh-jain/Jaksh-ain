@@ -87,20 +87,14 @@
         }
       }
     </style>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <div class="spline-embed">
       <iframe
         src="https://my.spline.design/100followers-zoXC7C05evBZRiMiCczMWO3e/"
         id="spline-frame"
-        loading="lazy"
-        style="pointer-events: none"
       ></iframe>
-      <img
-        src="your-static-background.jpg"
-        class="mobile-bg"
-        alt="Background"
-      />
     </div>
 
     <header>
@@ -126,7 +120,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
+    <section id="home" class="hero" data-aos="fade-up">
       <div class="container">
         <h1>
           <span>Hello<br />I'm Jaksh Jain<br />Develop / Design</span>
@@ -216,18 +210,18 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
+    <section id="about" class="about" data-aos="fade-up">
       <div class="container">
         <div class="about-container">
-          <div class="about-image">
+          <div class="about-image" data-aos="fade-left">
             <img
-              src="images/Jaksh1-removebg-preview.png"
+              src="../images/Jaksh1-removebg-preview.png"
               height="250px"
               weight="250px"
               alt="Jaksh Jain"
             />
           </div>
-          <div class="about-content">
+          <div class="about-content" data-aos="fade-right">
             <h2>About me</h2>
             <p>
               Hi, I am Jaksh Jain. I completed my schooling in 2024 at Guru
@@ -250,13 +244,14 @@
     </section>
 
     <!-- Journey Section -->
-    <section class="journey" id="journey">
+    <section class="journey" id="journey" data-aos="fade-up">
       <div class="container">
         <div class="section-header">
           <h2>Journey</h2>
         </div>
         <div class="timeline">
-          <div class="timeline-item">
+          <div class="journey-zap"></div>
+          <div class="timeline-item" data-aos="flip-up">
             <div class="timeline-dot"></div>
             <h3 class="timeline-title">Higher Secondary</h3>
             <div class="timeline-subtitle">
@@ -266,7 +261,7 @@
               <p>Completed my higher secondary education.</p>
             </div>
           </div>
-          <div class="timeline-item">
+          <div class="timeline-item" data-aos="flip-up">
             <div class="timeline-dot"></div>
             <h3 class="timeline-title">College SRMIST</h3>
             <div class="timeline-subtitle">B-Tech(2024-28)</div>
@@ -277,7 +272,7 @@
               </p>
             </div>
           </div>
-          <div class="timeline-item">
+          <div class="timeline-item" data-aos="flip-up">
             <div class="timeline-dot"></div>
             <h3 class="timeline-title">Cloned Airbnb</h3>
             <div class="timeline-subtitle">HTML, CSS, and JavaScript</div>
@@ -288,7 +283,7 @@
               </p>
             </div>
           </div>
-          <div class="timeline-item">
+          <div class="timeline-item" data-aos="flip-up">
             <div class="timeline-dot"></div>
             <h3 class="timeline-title">Cloned Tidal</h3>
             <div class="timeline-subtitle">HTML, CSS, and JavaScript</div>
@@ -299,7 +294,7 @@
               </p>
             </div>
           </div>
-          <div class="timeline-item">
+          <div class="timeline-item" data-aos="flip-up">
             <div class="timeline-dot"></div>
             <h3 class="timeline-title">Hackathon at IISc Bangalore</h3>
             <div class="timeline-subtitle">Achieved 4th Place</div>
@@ -310,7 +305,7 @@
               </p>
             </div>
           </div>
-          <div class="timeline-item">
+          <div class="timeline-item" data-aos="flip-up">
             <div class="timeline-dot"></div>
             <h3 class="timeline-title">Certified in Python</h3>
             <div class="timeline-subtitle">Udemy Platform</div>
@@ -321,7 +316,7 @@
               </p>
             </div>
           </div>
-          <div class="timeline-item">
+          <div class="timeline-item" data-aos="flip-up">
             <div class="timeline-dot"></div>
             <h3 class="timeline-title">MedBot</h3>
             <div class="timeline-subtitle">
@@ -334,7 +329,7 @@
               </p>
             </div>
           </div>
-          <div class="timeline-item">
+          <div class="timeline-item" data-aos="flip-up">
             <div class="timeline-dot"></div>
             <h3 class="timeline-title">Web Projects</h3>
             <div class="timeline-subtitle">Portfolio Website</div>
@@ -350,15 +345,15 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects">
+    <section id="projects" class="projects" data-aos="fade-up">
       <div class="container">
         <div class="section-header">
           <h2>Certifications & Projects</h2>
         </div>
         <div class="projects-grid">
-          <div class="project-card">
+          <div class="project-card" data-aos="zoom-in-up">
             <div class="project-image">
-              <img src="images/airbnb.png" alt="Project" />
+              <img src="../images/airbnb.png" alt="Project" />
             </div>
             <h3 class="project-title">Airbnb Clone</h3>
             <div class="project-tags">
@@ -380,9 +375,9 @@
               >Source Code</a
             >
           </div>
-          <div class="project-card">
+          <div class="project-card" data-aos="zoom-in-up">
             <div class="project-image">
-              <img src="images/tidal.png" alt="Project" />
+              <img src="../images/tidal.png" alt="Project" />
             </div>
             <h3 class="project-title">Tidal Clone</h3>
             <div class="project-tags">
@@ -405,9 +400,9 @@
               >Source Code</a
             >
           </div>
-          <div class="project-card">
+          <div class="project-card" data-aos="zoom-in-up">
             <div class="project-image">
-              <img src="images/french pbl.png" alt="Project" />
+              <img src="../images/french pbl.png" alt="Project" />
             </div>
             <h3 class="project-title">French Assignment</h3>
             <div class="project-tags">
@@ -430,9 +425,9 @@
               >Source Code</a
             >
           </div>
-          <div class="project-card">
+          <div class="project-card" data-aos="zoom-in-up">
             <div class="project-image">
-              <img src="images/Fasion.png" alt="Project" />
+              <img src="../images/Fasion.png" alt="Project" />
             </div>
             <h3 class="project-title">Fasion</h3>
             <div class="project-tags">
@@ -455,9 +450,9 @@
               >Source Code</a
             >
           </div>
-          <div class="project-card">
+          <div class="project-card" data-aos="zoom-in-up">
             <div class="project-image">
-              <img src="images/MedBot.png" alt="Project" />
+              <img src="../images/MedBot.png" alt="Project" />
             </div>
             <h3 class="project-title">MedBot</h3>
             <div class="project-tags">
@@ -481,9 +476,9 @@
               >Source Code</a
             >
           </div>
-          <div class="project-card">
+          <div class="project-card" data-aos="zoom-in-up">
             <div class="project-image">
-              <img src="images/Portfolio.png" alt="Project" />
+              <img src="../images/Portfolio.png" alt="Project" />
             </div>
             <h3 class="project-title">Portfolio-Website</h3>
             <div class="project-tags">
@@ -511,7 +506,7 @@
     </section>
 
     <!-- Skills Section -->
-    <section class="skills">
+    <section class="skills" data-aos="fade-up">
       <div class="container">
         <div class="section-header">
           <h2>Skills</h2>
@@ -595,7 +590,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <section id="contact" class="contact" data-aos="fade-up">
       <div class="container">
         <div class="section-header">
           <h2>Get In Touch</h2>
@@ -721,7 +716,7 @@
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer data-aos="fade-in">
       <div class="container">
         <div class="footer-container">
           <div class="footer-logo">Jaksh Jain</div>
@@ -765,5 +760,13 @@
     </footer>
 
     <script src="portfolio.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: false,
+        duration: 800,
+        offset: 100,
+      });
+    </script>
   </body>
 </html>
