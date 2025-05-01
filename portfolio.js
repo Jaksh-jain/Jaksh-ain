@@ -181,3 +181,10 @@ if (contactForm2) {
     this.reset();
   });
 }
+
+// Close menu when a link is clicked (mobile UX)
+document.querySelectorAll(".nav-links a").forEach((link) => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("active");
+  });
+});
