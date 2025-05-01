@@ -113,3 +113,29 @@ window.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+// Activate glowing effect on journey timeline dots
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+      }
+    });
+  },
+  {
+    threshold: 0.6,
+  }
+);
+
+document.querySelectorAll(".timeline-dot").forEach((dot) => {
+  observer.observe(dot);
+});
+
+// Sequential glow effect for journey timeline
+const timelineDots = document.querySelectorAll(".timeline-dot");
+let delay = 0;
+timelineDots.forEach((dot, i) => {
+  observer.observe(dot);
+  dot.style.transitionDelay = `${i * 150}ms`;
+});
