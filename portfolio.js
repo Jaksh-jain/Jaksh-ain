@@ -35,13 +35,7 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 });
 
 // Form submission alert
-const contactForm = document.querySelector(".contact-form form");
-if (contactForm) {
-  contactForm.addEventListener("submit", function (e) {
-    e.preventDefault();
-    alert("Thank you for your message! I will get back to you soon.");
-    this.reset();
-  });
+
 }
 
 // Mobile Menu Toggle
@@ -163,23 +157,7 @@ function typeEffect() {
 document.addEventListener("DOMContentLoaded", typeEffect);
 
 // Toast Notification on Form Submit
-const contactForm2 = document.querySelector(".contact-form form");
-if (contactForm2) {
-  contactForm2.addEventListener("submit", function (e) {
-    e.preventDefault();
-    const toast = document.createElement("div");
-    toast.textContent = "Message sent successfully!";
-    toast.style.cssText = `
-      position: fixed; bottom: 30px; right: 30px;
-      background: #2a9df4; color: white;
-      padding: 15px 20px; border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-      z-index: 9999;
-    `;
-    document.body.appendChild(toast);
-    setTimeout(() => toast.remove(), 3000);
-    this.reset();
-  });
+
 }
 
 // Close menu when a link is clicked (mobile UX)
@@ -188,3 +166,30 @@ document.querySelectorAll(".nav-links a").forEach((link) => {
     navLinks.classList.remove("active");
   });
 });
+
+
+const contactForm = document.getElementById("contact-form");
+if (contactForm) {
+  contactForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    emailjs.sendForm("service_p15zns3", "template_ujtfuim", this)
+      .then(() => {
+        const toast = document.createElement("div");
+        toast.textContent = "Message sent successfully!";
+        toast.style.cssText = `
+          position: fixed; bottom: 30px; right: 30px;
+          background: #2a9df4; color: white;
+          padding: 15px 20px; border-radius: 10px;
+          box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+          z-index: 9999;
+        `;
+        document.body.appendChild(toast);
+        setTimeout(() => toast.remove(), 3000);
+        contactForm.reset();
+      }, (error) => {
+        alert("Failed to send message. Please try again later.");
+        console.error("EmailJS Error:", error);
+      });
+  });
+}
